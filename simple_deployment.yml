@@ -1,0 +1,9 @@
+name: medium-chatbot
+
+services:
+  - name: discovery
+    source: app.workflows:discovery_workflow
+  - name: tech-explorer
+    source: app.workflows:tech_explorer_workflow  
+  - name: analytics
+    source: app.workflows:analytics_workflow

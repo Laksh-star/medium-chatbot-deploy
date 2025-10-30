@@ -139,7 +139,11 @@ def analyze_tech_stack(technology: str) -> str:
     output.append(f"\nArticles mentioning '{technology}':\n")
     for article in matching_articles[:5]:
         output.append(f"• {article['title']}")
-        output.append(f"  Date: {article.get('date', 'Unknown')[:10]}")
+        date_str = article.get('date', 'Unknown')
+        if date_str and date_str != 'Unknown':
+            output.append(f"  Date: {date_str[:10]}")
+        else:
+            output.append(f"  Date: Unknown")
         output.append("")
 
     if len(matching_articles) > 5:

@@ -1,6 +1,7 @@
 # LlamaDeploy deployment configuration
 name: medium-chatbot
-workflows:
+
+services:
   - name: discovery
     source: app.workflows:discovery_workflow
     port: 8001
