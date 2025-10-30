@@ -167,7 +167,7 @@ def find_content_gaps() -> str:
 
     # Recent vs old content
     recent_cutoff = 2023
-    recent_articles = [a for a in articles_manifest if a.get('year', 0) >= recent_cutoff]
+    recent_articles = [a for a in articles_manifest if (a.get('year', 0) or 0) >= recent_cutoff]
 
     output = []
     output.append("📈 Content Gap Analysis\n")

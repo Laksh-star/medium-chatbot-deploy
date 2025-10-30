@@ -1,0 +1,8 @@
+llama-index>=0.12.0
+llama-cloud-services
+llama-index-llms-openai
+llama-index-embeddings-openai
+llama-index-workflows>=2.0.0
+beautifulsoup4
+python-dateutil
+nest-asyncio
