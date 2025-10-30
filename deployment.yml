@@ -2,14 +2,26 @@
 name: medium-chatbot
 
 services:
-  - name: discovery
-    source: app.workflows:discovery_workflow
+  discovery:
+    name: discovery
+    source:
+      type: local
+      name: app.workflows:discovery_workflow
+      path: .
     port: 8001
-  - name: tech-explorer  
-    source: app.workflows:tech_explorer_workflow
+  tech-explorer:
+    name: tech-explorer  
+    source:
+      type: local
+      name: app.workflows:tech_explorer_workflow
+      path: .
     port: 8002
-  - name: analytics
-    source: app.workflows:analytics_workflow
+  analytics:
+    name: analytics
+    source:
+      type: local
+      name: app.workflows:analytics_workflow
+      path: .
     port: 8003
 
 control_plane:

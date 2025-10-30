@@ -1,0 +1,15 @@
+# LlamaDeploy test configuration
+name: medium-chatbot-test
+
+services:
+  discovery:
+    name: discovery
+    source: app.workflows:discovery_workflow
+    port: 8001
+
+control_plane:
+  port: 8000
+
+message_queue:
+  type: redis
+  url: redis://localhost:6379
