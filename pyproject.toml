@@ -9,21 +9,15 @@ dependencies = [
     "llama-cloud-services",
     "llama-index-llms-openai", 
     "llama-index-embeddings-openai",
-    "llama-index-workflows",
+    "fastapi",
+    "uvicorn",
     "beautifulsoup4",
     "python-dateutil",
     "nest-asyncio",
 ]
 
-[tool.llamactl]
-
-[tool.llamactl.workflows]
-discovery = "app.workflows:discovery_workflow"
-tech-explorer = "app.workflows:tech_explorer_workflow"
-analytics = "app.workflows:analytics_workflow"
-
-[tool.llamactl.ui]
-enabled = false
+[project.scripts]
+start = "simple_api:app"
 
 [build-system]
 requires = ["setuptools>=61.0"]
