@@ -3,7 +3,7 @@ name = "medium-chatbot"
 version = "0.1.0"
 description = "Medium Articles AI Chatbot for LlamaCloud deployment"
 authors = [{name = "Lakshmi narayana .U"}]
-requires-python = ">=3.8"
+requires-python = ">=3.9,<4.0"
 dependencies = [
     "llama-index>=0.11.17",
     "llama-cloud-services",
