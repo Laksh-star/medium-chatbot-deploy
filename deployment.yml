@@ -1,0 +1,19 @@
+# LlamaDeploy deployment configuration
+name: medium-chatbot
+workflows:
+  - name: discovery
+    source: app.workflows:discovery_workflow
+    port: 8001
+  - name: tech-explorer  
+    source: app.workflows:tech_explorer_workflow
+    port: 8002
+  - name: analytics
+    source: app.workflows:analytics_workflow
+    port: 8003
+
+control_plane:
+  port: 8000
+
+message_queue:
+  type: redis
+  url: redis://localhost:6379
